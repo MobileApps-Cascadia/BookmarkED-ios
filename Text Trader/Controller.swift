@@ -8,6 +8,12 @@
 
 import Foundation
 
+struct Book: Codable, Identifiable {
+    let id = UUID()
+    var title: String
+    var owner: Int //should this be the owner name or owner id ?
+}
+
 class Controller: ObservableObject{
     
     func addBook(){
@@ -26,7 +32,17 @@ class Controller: ObservableObject{
         
     }
     func getBooks(){
-        
+        guard let url = URL(string: "http://texttrader.com/api/books") else {
+            print("Invalid URL")
+            return
+        }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            let books = try! JSONDecoder().decode([Book].self, from: data!)
+            print(books)
+            DispatchQueue.main.async {
+                completion(books)
+            }
+        }.resume()
     }
     func editBook(){
         
