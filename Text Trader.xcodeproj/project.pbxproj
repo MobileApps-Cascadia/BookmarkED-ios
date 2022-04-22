@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C32106D042899F25A03EC2E /* Pods_Text_TraderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7089BAE1F6761E22752F4C79 /* Pods_Text_TraderTests.framework */; };
 		3F8A68E62458B04C00119DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E52458B04C00119DBB /* AppDelegate.swift */; };
 		3F8A68E82458B04C00119DBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E72458B04C00119DBB /* SceneDelegate.swift */; };
 		3F8A68EA2458B04C00119DBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E92458B04C00119DBB /* ContentView.swift */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0068EBDE2EC383E51E50D6BA /* Pods-Text Trader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text Trader.debug.xcconfig"; path = "Target Support Files/Pods-Text Trader/Pods-Text Trader.debug.xcconfig"; sourceTree = "<group>"; };
+		36585F3D95475EDD3DBAC53E /* Pods-Text Trader-Text TraderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text Trader-Text TraderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Text Trader-Text TraderUITests/Pods-Text Trader-Text TraderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F8A68E22458B04C00119DBB /* Text Trader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Trader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8A68E52458B04C00119DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8A68E72458B04C00119DBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA97AF477C0346067B47F3CB /* Pods_Text_Trader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C32106D042899F25A03EC2E /* Pods_Text_TraderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +79,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640C3E0C36F9700DD3C634C4 /* Pods_Text_Trader_Text_TraderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AA54A1C2CC9CC8854535767 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98C893BFBBD57B0976C9E39D /* Pods_Text_Trader.framework */,
+				708BFCC981C3E86ABD0F31B7 /* Pods_Text_Trader_Text_TraderUITests.framework */,
+				7089BAE1F6761E22752F4C79 /* Pods_Text_TraderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F8A68D92458B04C00119DBB = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +103,8 @@
 				3F8A68FB2458B04C00119DBB /* Text TraderTests */,
 				3F8A69062458B04C00119DBB /* Text TraderUITests */,
 				3F8A68E32458B04C00119DBB /* Products */,
+				7CC35D434B02F584E14DE820 /* Pods */,
+				1AA54A1C2CC9CC8854535767 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +121,8 @@
 		3F8A68E42458B04C00119DBB /* Text Trader */ = {
 			isa = PBXGroup;
 			children = (
+				74201A9C24D4C46C002D2677 /* awsconfiguration.json */,
+				74201A9A24D4C465002D2677 /* amplifyconfiguration.json */,
 				3F8A68E52458B04C00119DBB /* AppDelegate.swift */,
 				3F8A68E72458B04C00119DBB /* SceneDelegate.swift */,
 				3F8A68E92458B04C00119DBB /* ContentView.swift */,
@@ -142,6 +162,19 @@
 			path = "Text TraderUITests";
 			sourceTree = "<group>";
 		};
+		7CC35D434B02F584E14DE820 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0068EBDE2EC383E51E50D6BA /* Pods-Text Trader.debug.xcconfig */,
+				930E281CC8F3BB3D311C9DE5 /* Pods-Text Trader.release.xcconfig */,
+				36585F3D95475EDD3DBAC53E /* Pods-Text Trader-Text TraderUITests.debug.xcconfig */,
+				41C4A18FF594F9DD72B8B59A /* Pods-Text Trader-Text TraderUITests.release.xcconfig */,
+				BB80FD18B5CD6129ED4AFFE6 /* Pods-Text TraderTests.debug.xcconfig */,
+				C8E8740164DD12859E3021A8 /* Pods-Text TraderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F8A690C2458B04C00119DBB /* Build configuration list for PBXNativeTarget "Text Trader" */;
 			buildPhases = (
+				B2F74CF797069D173BE8229C /* [CP] Check Pods Manifest.lock */,
 				3F8A68DE2458B04C00119DBB /* Sources */,
 				3F8A68DF2458B04C00119DBB /* Frameworks */,
 				3F8A68E02458B04C00119DBB /* Resources */,
+				D3FE76E7A2CC4D0915740074 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F8A690F2458B04C00119DBB /* Build configuration list for PBXNativeTarget "Text TraderTests" */;
 			buildPhases = (
+				901528B6443355896F797DAC /* [CP] Check Pods Manifest.lock */,
 				3F8A68F42458B04C00119DBB /* Sources */,
 				3F8A68F52458B04C00119DBB /* Frameworks */,
 				3F8A68F62458B04C00119DBB /* Resources */,
@@ -184,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F8A69122458B04C00119DBB /* Build configuration list for PBXNativeTarget "Text TraderUITests" */;
 			buildPhases = (
+				3B1CB26EB601B4F4C1FA0C79 /* [CP] Check Pods Manifest.lock */,
 				3F8A68FF2458B04C00119DBB /* Sources */,
 				3F8A69002458B04C00119DBB /* Frameworks */,
 				3F8A69012458B04C00119DBB /* Resources */,
+				1A1FB1823DFD5ABA4633E415 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74201A9D24D4C46C002D2677 /* awsconfiguration.json in Resources */,
 				3F8A68F22458B04C00119DBB /* LaunchScreen.storyboard in Resources */,
 				3FD9DEDF281227F5004D8DB2 /* Assets.xcassets in Resources */,
 				3F8A68EF2458B04C00119DBB /* Preview Assets.xcassets in Resources */,
@@ -267,6 +306,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A1FB1823DFD5ABA4633E415 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Text Trader-Text TraderUITests/Pods-Text Trader-Text TraderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Text Trader-Text TraderUITests/Pods-Text Trader-Text TraderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Text Trader-Text TraderUITests/Pods-Text Trader-Text TraderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B1CB26EB601B4F4C1FA0C79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Text Trader-Text TraderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		901528B6443355896F797DAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Text TraderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2F74CF797069D173BE8229C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Text Trader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3FE76E7A2CC4D0915740074 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Text Trader/Pods-Text Trader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Text Trader/Pods-Text Trader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Text Trader/Pods-Text Trader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F8A68DE2458B04C00119DBB /* Sources */ = {
@@ -440,6 +582,7 @@
 		};
 		3F8A690D2458B04C00119DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0068EBDE2EC383E51E50D6BA /* Pods-Text Trader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +602,7 @@
 		};
 		3F8A690E2458B04C00119DBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 930E281CC8F3BB3D311C9DE5 /* Pods-Text Trader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +622,7 @@
 		};
 		3F8A69102458B04C00119DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB80FD18B5CD6129ED4AFFE6 /* Pods-Text TraderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,6 +644,7 @@
 		};
 		3F8A69112458B04C00119DBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E8740164DD12859E3021A8 /* Pods-Text TraderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +666,7 @@
 		};
 		3F8A69132458B04C00119DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36585F3D95475EDD3DBAC53E /* Pods-Text Trader-Text TraderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +686,7 @@
 		};
 		3F8A69142458B04C00119DBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C4A18FF594F9DD72B8B59A /* Pods-Text Trader-Text TraderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
