@@ -31,7 +31,7 @@ class Controller: ObservableObject{
     func getBook(){
         
     }
-    func getBooks(){
+    func getBooks(completion:@escaping ([Book]) -> ()){
         guard let url = URL(string: "http://texttrader.com/api/books") else {
             print("Invalid URL")
             return
