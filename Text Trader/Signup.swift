@@ -12,6 +12,7 @@ struct Signup: View {
     @State var username = ""
     @State var password = ""
     @State var confirmPassword = ""
+   
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
@@ -31,7 +32,7 @@ struct Signup: View {
                     .frame(width: 200, height: 200)
                     .clipped()
                     .cornerRadius(200)
-                    .padding(.bottom, 75)
+                    .padding(.bottom, 50)
                 
                 HStack(spacing:5){
                     Image(systemName: "person.fill")
@@ -87,12 +88,13 @@ struct Signup: View {
                         TextField("", text: self.$confirmPassword)
                             .foregroundColor(Color.white)
                             .padding()
+                    
                 }
                 }
                 Divider()
                     .background(Color.white)
                 
-                
+    
                 HStack {
                     Button(action: {}, label: {
                         Spacer()
