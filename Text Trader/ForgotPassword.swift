@@ -1,19 +1,21 @@
 //
-//  Login.swift
-//  TextTrader-iOS-2022
+//  ForgotPassword.swift
+//  Text Trader
 //
-//  Created by Student Account on 4/20/22.
+//  Created by Student Account on 5/5/22.
+//  Copyright © 2022 Cascadia. All rights reserved.
 //
 
 import SwiftUI
 
-struct Login: View {
-    @State var username = ""
-    @State var password = ""
+struct ForgotPassword: View {
+    
+    @State var email = ""
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
     var body: some View {
+        
         ZStack {
             Rectangle()
                 .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
@@ -27,66 +29,53 @@ struct Login: View {
                     .frame(width: 200, height: 200)
                     .clipped()
                     .cornerRadius(200)
-                    .padding(.bottom, 75)
+                    .padding(.bottom, 50)
+                
+                Text("Reset Password")
+                    .foregroundColor(Color("Light-shadow"))
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 40))
+                
+                HStack {
+                    Text("To reset your password, please enter the email address you used to signup below and we'll sed a password reset link to your email.")
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                    
+                }.padding(.bottom, 15)
+                    .padding(.top, 5)
+                
                 
                 HStack(spacing:5){
-                    Image(systemName: "person.fill")
+                    Image(systemName: "envelope.fill")
                         .foregroundColor(Color("Light-shadow"))
                         .padding()
                     
                     ZStack(alignment: .leading){
                         
-                        if username.isEmpty {
-                            Text("Username")
+                        if email.isEmpty {
+                            Text("Email Address")
                                 .foregroundColor(Color.white.opacity(0.8))
                         }
-                        TextField("", text: self.$username)
+                        TextField("", text: self.$email)
                             .padding()
                             .foregroundColor(.white)
                     }
                 }
                 Divider().background(Color.white)
                 
-                HStack(spacing:5){
-                    
-                    Image(systemName: "lock.fill")
-                        .foregroundColor(Color("Light-shadow"))
-                        .padding()
-                    
-                    
-                    ZStack(alignment: .leading){
-                        if password.isEmpty {
-                            Text("Password")
-                                .foregroundColor(Color.white.opacity(0.8))
-                        }
-                        TextField("", text: self.$password)
-                            .foregroundColor(Color.white)
-                            .padding()
-                    }
-                }
-                Divider()
-                    .background(Color.white)
                 
-                HStack {
-                    NavigationLink(destination: ForgotPassword(), label: {
-                        Text("Forgot password?")
-                            .foregroundColor(.gray)
-                    })
-                }.padding(.bottom, 15)
-                    .padding(.top, 5)
+                
+                
                 
                 
                 
                 HStack {
-                    
                     Button(action: {}, label: {
                         Spacer()
                         
-                        Text("LOGIN")
+                        Text("SEND RESET LINK")
                             .fontWeight(.bold)
-                        
                         Spacer()
-                        
                         
                     })
                         .foregroundColor(Color.white.opacity(0.8))
@@ -95,27 +84,18 @@ struct Login: View {
                         .cornerRadius(10)
                         .padding()
                 }
-                HStack {
-                    Text("Don't have an account?")
-                        .foregroundColor(.gray)
-                    NavigationLink(destination: Signup(), label: {
-                        Text("Sign up")
-                            .foregroundColor(.blue)
-                    })
-                }.padding(.bottom, 15)
-                    .padding(.top, 5)
                 
             }
             .padding(.horizontal)
             .padding()
             .offset(y: -10)
         }
+        
     }
-    
 }
 
-struct Login_Previews: PreviewProvider {
+struct ForgotPassword_Previews: PreviewProvider {
     static var previews: some View {
-        Login()
+        ForgotPassword()
     }
 }
