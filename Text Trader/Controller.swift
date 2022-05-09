@@ -10,26 +10,42 @@ import Foundation
 
 struct Book: Codable, Identifiable {
     let id = UUID()
-    var title: String
-    var owner: Int //should this be the owner name or owner id ?
+    let title: String
+    let author: String
+    let isbn: String
+    let price: Decimal
 }
 
 class Controller: ObservableObject{
+    @Published var books = [Book]()
     
-    func addBook(){
+    var baseURL = "https://mgmcevbvw4.execute-api.us-west-2.amazonaws.com/dev/"
+    var testURL = "https://reqres.in/api/books"
+    
+    func addBook(username: String){
         
     }
-    func registerUser(){
+    func register(username: String, password: String){
+        guard let url = URL(string: baseURL + "register") else {
+            print("Invalid URL")
+            return
+        }
+//        URLSession.shared.
         
     }
-    func login(){
+    func login(username: String, password: String){
+        guard let url = URL(string: baseURL + "login") else {
+            print("Invalid URL")
+            return
+        }
+//        URLSession.shared.
         
     }
-    func getUserInfo(){
-        
+    func getUserInfo(username: String){
+        // TODO: Stretch goal
     }
-    func getBook(){
-        
+    func getBook(username: String){
+        // TODO: Stretch goal
     }
     func getBooks(completion:@escaping ([Book]) -> ()){
         guard let url = URL(string: "http://texttrader.com/api/books") else {
@@ -45,16 +61,19 @@ class Controller: ObservableObject{
         }.resume()
     }
     func editBook(){
-        
+        // TODO: Stretch goal
     }
     func updateUserInfo(){
-        
+        // TODO: Stretch goal
     }
     func deleteBook(){
-        
+        // TODO: Stretch goal
     }
     func deleteUser(){
-        
+        // TODO: Stretch goal
+    }
+    func testFunc() -> String {
+        return "This is working"
     }
     
 }

@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var books = [Book]()
+    @State var loggedUser = ""
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
