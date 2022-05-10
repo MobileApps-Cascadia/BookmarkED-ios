@@ -79,7 +79,7 @@ struct Login: View {
                 
                 HStack {
                     
-                    Button(action: {}, label: {
+                    NavigationLink(destination: Home(), label: {
                         Spacer()
                         
                         Text("LOGIN")

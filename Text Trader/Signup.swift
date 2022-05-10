@@ -96,7 +96,7 @@ struct Signup: View {
                 
                 
                 HStack {
-                    Button(action: {}, label: {
+                    NavigationLink(destination: Signup(), label: {
                         Spacer()
                         
                         Text("REGISTER")

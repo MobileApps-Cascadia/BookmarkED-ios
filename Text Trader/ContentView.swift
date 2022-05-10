@@ -32,7 +32,7 @@ struct ContentView: View {
                     
                     HStack {
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: Login(), label: {
                             
                             Spacer()
                             
