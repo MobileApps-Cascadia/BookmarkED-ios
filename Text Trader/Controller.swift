@@ -7,20 +7,15 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Book: Codable, Identifiable {
-    let id = UUID()
-    let title: String
-    let author: String
-    let isbn: String
-    let price: Decimal
-}
 
 class Controller: ObservableObject{
     @Published var books = [Book]()
     
     var baseURL = "https://mgmcevbvw4.execute-api.us-west-2.amazonaws.com/dev/"
     var testURL = "https://reqres.in/api/books"
+    let apiKey = "JXtnQpcT1v5SW1WPq4IJ43sputm5xEr9Z29qsEh4"
     
     func addBook(username: String){
         
@@ -38,6 +33,8 @@ class Controller: ObservableObject{
             print("Invalid URL")
             return
         }
+        var request = URLRequest(url: url)
+        request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
 //        URLSession.shared.
         
     }

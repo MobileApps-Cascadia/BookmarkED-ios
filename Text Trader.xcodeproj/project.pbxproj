@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1911AE222812766D007454B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1911AE212812766D007454B7 /* Assets.xcassets */; };
 		1911AE242813547A007454B7 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911AE232813547A007454B7 /* Controller.swift */; };
+		19EC7912282A1FF8009EB233 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC7911282A1FF8009EB233 /* Book.swift */; };
+		19EC7914282A207C009EB233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC7913282A207C009EB233 /* User.swift */; };
 		3F8A68E62458B04C00119DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E52458B04C00119DBB /* AppDelegate.swift */; };
 		3F8A68E82458B04C00119DBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E72458B04C00119DBB /* SceneDelegate.swift */; };
 		3F8A68EA2458B04C00119DBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E92458B04C00119DBB /* ContentView.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		1911AE212812766D007454B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1911AE232813547A007454B7 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		19EC7911282A1FF8009EB233 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		19EC7913282A207C009EB233 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F8A68E22458B04C00119DBB /* Text Trader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Trader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8A68E52458B04C00119DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8A68E72458B04C00119DBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				3F8A68F02458B04C00119DBB /* LaunchScreen.storyboard */,
 				3F8A68F32458B04C00119DBB /* Info.plist */,
 				3F8A68ED2458B04C00119DBB /* Preview Content */,
+				19EC7911282A1FF8009EB233 /* Book.swift */,
+				19EC7913282A207C009EB233 /* User.swift */,
 			);
 			path = "Text Trader";
 			sourceTree = "<group>";
@@ -278,7 +284,9 @@
 			files = (
 				3F8A68E62458B04C00119DBB /* AppDelegate.swift in Sources */,
 				3FB88F4528126C0700174623 /* Signup.swift in Sources */,
+				19EC7912282A1FF8009EB233 /* Book.swift in Sources */,
 				3F8A68E82458B04C00119DBB /* SceneDelegate.swift in Sources */,
+				19EC7914282A207C009EB233 /* User.swift in Sources */,
 				1911AE242813547A007454B7 /* Controller.swift in Sources */,
 				3F8A68EA2458B04C00119DBB /* ContentView.swift in Sources */,
 				3FB88F4328126BF800174623 /* Login.swift in Sources */,
