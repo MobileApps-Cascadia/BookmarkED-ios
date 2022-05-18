@@ -35,15 +35,12 @@ struct Home: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color("Home-font-color"))
                         
-                        
-                        
                         Button(action: {}, label: {
                             Spacer()
                             
                             Text("POST BOOK")
                                 .foregroundColor(Color("Login-button"))
                             Spacer()
-                            
                             
                         })
                             .foregroundColor(Color.white.opacity(0.8))
@@ -103,7 +100,7 @@ struct Home: View {
                 
                 HStack {
                     VStack{
-                        Text("Messanger")
+                        Text("Messenger")
                             .font(.title)
                             .foregroundColor(Color("Home-font-color"))
                             .padding(.top)
@@ -133,6 +130,7 @@ struct Home: View {
                 
             }
             .offset(y:220)
+            .hiddenNavigationBarStyle()
         }
         
     }

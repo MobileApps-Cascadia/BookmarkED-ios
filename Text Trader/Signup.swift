@@ -125,6 +125,7 @@ struct Signup: View {
             .padding()
             
             .offset(y: -10)
+            .hiddenNavigationBarStyle()
         }
     }
 }

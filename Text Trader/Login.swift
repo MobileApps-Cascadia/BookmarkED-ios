@@ -109,6 +109,7 @@ struct Login: View {
             .padding(.horizontal)
             .padding()
             .offset(y: -10)
+            .hiddenNavigationBarStyle()
         }
     }
     
