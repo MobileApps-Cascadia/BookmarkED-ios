@@ -10,10 +10,14 @@ import SwiftUI
 
 class Book: Codable, Identifiable {
     
-    let id = UUID()
-    let title: String
-    let author: String
-    let isbn: String
-    let price: Decimal
+//    let id = UUID()
+//    let title: String
+//    let author: String
+//    let isbn: String
+//    let price: Decimal
+    let id: Int
+    let name: String
+    let year: Int
+    let color: String
 }
 

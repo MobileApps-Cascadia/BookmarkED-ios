@@ -28,6 +28,8 @@ class User: ObservableObject, Codable {
         try container.encode(token, forKey: .token)
     }
     
+    init() {}
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 

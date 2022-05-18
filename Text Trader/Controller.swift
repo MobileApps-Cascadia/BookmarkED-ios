@@ -9,8 +9,12 @@
 import Foundation
 import SwiftUI
 
+struct Response: Codable {
+    var data: [Book]
+}
 
 class Controller: ObservableObject{
+    
     @Published var books = [Book]()
     
     var baseURL = "https://mgmcevbvw4.execute-api.us-west-2.amazonaws.com/dev/"
@@ -20,7 +24,7 @@ class Controller: ObservableObject{
     func addBook(username: String){
         
     }
-    func register(username: String, password: String){
+    func register(user: User){
         guard let url = URL(string: baseURL + "register") else {
             print("Invalid URL")
             return
@@ -44,18 +48,25 @@ class Controller: ObservableObject{
     func getBook(username: String){
         // TODO: Stretch goal
     }
-    func getBooks(completion:@escaping ([Book]) -> ()){
-        guard let url = URL(string: "http://texttrader.com/api/books") else {
+    @available(iOS 15.0, *)
+    func getBooks() async -> [Book] {
+        guard let url = URL(string: testURL) else {
             print("Invalid URL")
-            return
+            return []
         }
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            let books = try! JSONDecoder().decode([Book].self, from: data!)
-            print(books)
-            DispatchQueue.main.async {
-                completion(books)
+        var request = URLRequest(url:url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "GET"
+        do {
+            let (potato, _) = try await URLSession.shared.data(from:url)
+            if let decodedResponse = try? JSONDecoder().decode(Response.self, from: potato){
+                books = decodedResponse.data
+                return books
             }
-        }.resume()
+        } catch {
+            print("Invalid Data")
+        }
+        return []
     }
     func editBook(){
         // TODO: Stretch goal

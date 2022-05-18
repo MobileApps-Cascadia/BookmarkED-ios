@@ -19,11 +19,13 @@ class Text_TraderTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    @available(iOS 15.0, *)
+    func testExample() async {
         print("Tests running.")
         let controller = Text_Trader.Controller()
-        print(controller.getBooks {(books) in self.books = books})
+        books = await controller.getBooks()
         let answer = controller.testFunc()
+        XCTAssert(books.count > 0)
         XCTAssertEqual(answer, "This is working")
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
