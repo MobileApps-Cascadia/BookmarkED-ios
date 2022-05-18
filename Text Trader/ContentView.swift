@@ -7,59 +7,73 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack{
-                Image("Logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 200)
-                    .clipped()
-                    .cornerRadius(200)
-                    .padding(.bottom, 50)
+        NavigationView{
+            ZStack {
+                Rectangle()
+                    .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .edgesIgnoringSafeArea(.all)
                 
-                
-                HStack {
-                    Button(action: {}, label: {
-                        Spacer()
+                VStack{
+                    Image("Logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 200, height: 200)
+                        .clipped()
+                        .cornerRadius(200)
+                        .padding(.bottom, 50)
+                    
+                    
+                    HStack {
                         
-                        Text("LOGIN")
-                            .fontWeight(.bold)
-                        Spacer()
+                        NavigationLink(destination: Login(), label: {
                             
-                    })
-                        .foregroundColor(Color.white.opacity(0.8))
-                        .padding()
-                        .background(Color("Login-button"))
-                        .cornerRadius(10)
-                        .padding()
+                            Spacer()
+                            
+                            Text("LOGIN")
+                                .fontWeight(.bold)
+                            Spacer()
+                            
+                            
+                        })
+                        
+                            .foregroundColor(Color.white.opacity(0.8))
+                            .padding()
+                            .background(Color("Login-button"))
+                            .cornerRadius(10)
+                            .padding()
+                        
+                    }
+                    
+                    HStack {
+                        Text("Don't have an account?")
+                            .foregroundColor(.gray)
+                        NavigationLink(destination: Signup(), label: {
+                            Text("Sign up")
+                                .foregroundColor(.blue)
+                        })
+                            .onTapGesture {
+                                
+                            }
+                    }.padding(.bottom, 15)
+                        .padding(.top, 5)
                 }
-                HStack {
-                    Text("Don't have an account?")
-                        .foregroundColor(.gray)
-                    Text("Sign up")
-                        .foregroundColor(.blue)
-                        .onTapGesture {
-                            
-                        }
-                }.padding(.bottom, 15)
-                    .padding(.top, 5)
+                .padding(.horizontal)
+                .padding()
+                
+                .offset(y: -60)
+                
             }
-            .padding(.horizontal)
-            .padding()
             
         }
+        
     }
+    
 }
 
 struct Home_Previews: PreviewProvider {

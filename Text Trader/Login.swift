@@ -33,28 +33,28 @@ struct Login: View {
                     Image(systemName: "person.fill")
                         .foregroundColor(Color("Light-shadow"))
                         .padding()
-                
+                    
                     ZStack(alignment: .leading){
-                
-                    if username.isEmpty {
-                        Text("Username")
-                            .foregroundColor(Color.white.opacity(0.8))
-                    }
-                    TextField("", text: self.$username)
-                        .padding()
-                        .foregroundColor(.white)
+                        
+                        if username.isEmpty {
+                            Text("Username")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$username)
+                            .padding()
+                            .foregroundColor(.white)
                     }
                 }
                 Divider().background(Color.white)
                 
                 HStack(spacing:5){
-               
+                    
                     Image(systemName: "lock.fill")
                         .foregroundColor(Color("Light-shadow"))
                         .padding()
-                   
-                
-                ZStack(alignment: .leading){
+                    
+                    
+                    ZStack(alignment: .leading){
                         if password.isEmpty {
                             Text("Password")
                                 .foregroundColor(Color.white.opacity(0.8))
@@ -62,27 +62,32 @@ struct Login: View {
                         TextField("", text: self.$password)
                             .foregroundColor(Color.white)
                             .padding()
-                }
+                    }
                 }
                 Divider()
                     .background(Color.white)
                 
                 HStack {
-                    Text("Forgot password?")
-                        .foregroundColor(.gray)
+                    NavigationLink(destination: ForgotPassword(), label: {
+                        Text("Forgot password?")
+                            .foregroundColor(.gray)
+                    })
                 }.padding(.bottom, 15)
                     .padding(.top, 5)
-                    
+                
                 
                 
                 HStack {
-                    Button(action: {}, label: {
+                    
+                    NavigationLink(destination: Home(), label: {
                         Spacer()
                         
                         Text("LOGIN")
                             .fontWeight(.bold)
+                        
                         Spacer()
-                            
+                        
+                        
                     })
                         .foregroundColor(Color.white.opacity(0.8))
                         .padding()
@@ -93,16 +98,21 @@ struct Login: View {
                 HStack {
                     Text("Don't have an account?")
                         .foregroundColor(.gray)
-                    Text("Sign up")
-                        .foregroundColor(.blue)
+                    NavigationLink(destination: Signup(), label: {
+                        Text("Sign up")
+                            .foregroundColor(.blue)
+                    })
                 }.padding(.bottom, 15)
                     .padding(.top, 5)
+                
             }
             .padding(.horizontal)
             .padding()
-            
+            .offset(y: -10)
+            .hiddenNavigationBarStyle()
         }
     }
+    
 }
 
 struct Login_Previews: PreviewProvider {

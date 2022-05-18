@@ -1,24 +1,21 @@
 //
-//  Signup.swift
+//  ForgotPassword.swift
 //  Text Trader
 //
-//  Created by Student Account on 4/21/22.
+//  Created by Student Account on 5/5/22.
 //  Copyright © 2022 Cascadia. All rights reserved.
 //
 
 import SwiftUI
 
-struct Signup: View {
-    @State var email = ""
-    @State var password = ""
-    @State var confirmPassword = ""
+struct ForgotPassword: View {
     
+    @State var email = ""
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
-    
-    
     var body: some View {
+        
         ZStack {
             Rectangle()
                 .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
@@ -33,6 +30,20 @@ struct Signup: View {
                     .clipped()
                     .cornerRadius(200)
                     .padding(.bottom, 50)
+                
+                Text("Reset Password")
+                    .foregroundColor(Color("Light-shadow"))
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 40))
+                
+                HStack {
+                    Text("To reset your password, please enter the email address you used to signup below and we'll sed a password reset link to your email.")
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                    
+                }.padding(.bottom, 15)
+                    .padding(.top, 5)
+                
                 
                 HStack(spacing:5){
                     Image(systemName: "envelope.fill")
@@ -52,54 +63,17 @@ struct Signup: View {
                 }
                 Divider().background(Color.white)
                 
-                HStack(spacing:5){
-                    
-                    Image(systemName: "lock.fill")
-                        .foregroundColor(Color("Light-shadow"))
-                        .padding()
-                    
-                    
-                    ZStack(alignment: .leading){
-                        if password.isEmpty {
-                            Text("Password")
-                                .foregroundColor(Color.white.opacity(0.8))
-                        }
-                        TextField("", text: self.$password)
-                            .foregroundColor(Color.white)
-                            .padding()
-                    }
-                }
-                Divider()
-                    .background(Color.white)
                 
                 
-                HStack(spacing:5){
-                    
-                    Image(systemName: "lock.fill")
-                        .foregroundColor(Color("Light-shadow"))
-                        .padding()
-                    
-                    
-                    ZStack(alignment: .leading){
-                        if password.isEmpty {
-                            Text("Confirm Password")
-                                .foregroundColor(Color.white.opacity(0.8))
-                        }
-                        TextField("", text: self.$confirmPassword)
-                            .foregroundColor(Color.white)
-                            .padding()
-                        
-                    }
-                }
-                Divider()
-                    .background(Color.white)
+                
+                
                 
                 
                 HStack {
-                    NavigationLink(destination: Signup(), label: {
+                    Button(action: {}, label: {
                         Spacer()
                         
-                        Text("REGISTER")
+                        Text("SEND RESET LINK")
                             .fontWeight(.bold)
                         Spacer()
                         
@@ -110,30 +84,19 @@ struct Signup: View {
                         .cornerRadius(10)
                         .padding()
                 }
-                HStack {
-                    Text("Have an account?")
-                        .foregroundColor(.gray)
-                    NavigationLink(destination: Login(), label: {
-                        Text("Login")
-                            .foregroundColor(.blue)
-                    })
-                }.padding(.bottom, 15)
-                    .padding(.top, 5)
                 
             }
             .padding(.horizontal)
             .padding()
-            
             .offset(y: -10)
             .hiddenNavigationBarStyle()
         }
+        
     }
 }
 
-
-struct Signup_Previews: PreviewProvider {
+struct ForgotPassword_Previews: PreviewProvider {
     static var previews: some View {
-        Signup()
+        ForgotPassword()
     }
 }
-
