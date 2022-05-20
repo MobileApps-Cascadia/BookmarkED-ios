@@ -12,6 +12,7 @@ struct Signup: View {
     @State var email = ""
     @State var password = ""
     @State var confirmPassword = ""
+    @State private var isShowingToast = false
     
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
@@ -49,7 +50,9 @@ struct Signup: View {
                             .padding()
                             .foregroundColor(.white)
                     }
+                    
                 }
+                
                 Divider().background(Color.white)
                 
                 HStack(spacing:5){
@@ -104,6 +107,7 @@ struct Signup: View {
                         Spacer()
                         
                     })
+                    
                         .foregroundColor(Color.white.opacity(0.8))
                         .padding()
                         .background(Color("Login-button"))

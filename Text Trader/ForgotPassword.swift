@@ -9,18 +9,24 @@
 import SwiftUI
 
 struct ForgotPassword: View {
-    
+    @State private var isShowingToast = false
     @State var email = ""
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
     var body: some View {
         
+        
         ZStack {
+            
             Rectangle()
                 .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
+            
+            
+            
+            
             
             VStack {
                 Image("Logo")
@@ -35,7 +41,7 @@ struct ForgotPassword: View {
                     .foregroundColor(Color("Light-shadow"))
                     .fontWeight(.bold)
                     .font(Font.system(size: 40))
-                
+                    .toast(isShowing: $isShowingToast)
                 HStack {
                     Text("To reset your password, please enter the email address you used to signup below and we'll sed a password reset link to your email.")
                         .foregroundColor(.gray)
@@ -75,6 +81,10 @@ struct ForgotPassword: View {
                         
                         Text("SEND RESET LINK")
                             .fontWeight(.bold)
+                            .onTapGesture {
+                                isShowingToast = true
+                            }
+                        
                         Spacer()
                         
                     })
