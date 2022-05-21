@@ -17,15 +17,47 @@ struct ForgotPassword: View {
     var body: some View {
         
         
+        
         ZStack {
+            
             
             Rectangle()
                 .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
             
-            
-            
+            VStack(spacing:0){
+                
+                HStack {
+                    
+                    
+                    NavigationLink(destination: Login(), label: {
+                        ZStack {
+                            Image(systemName: "arrow.left")
+                                .font(.title)
+                                .foregroundColor(Color("Light-shadow"))
+                                .offset(x:15)
+                        }
+                    })
+                    
+                    Spacer()
+                    
+                    
+                    
+                    NavigationLink(destination: {}, label: {
+                        ZStack {
+                            Text("Help")
+                                .font(.title)
+                                .foregroundColor(Color("Light-shadow"))
+                                .offset(x:-20)
+                        }
+                    })
+                }
+                
+                .offset(y: 20)
+                Spacer()
+                
+            }
             
             
             VStack {
@@ -68,12 +100,6 @@ struct ForgotPassword: View {
                     }
                 }
                 Divider().background(Color.white)
-                
-                
-                
-                
-                
-                
                 
                 HStack {
                     NavigationLink(destination: Login(), label: {
