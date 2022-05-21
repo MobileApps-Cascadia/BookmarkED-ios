@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1911AE222812766D007454B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1911AE212812766D007454B7 /* Assets.xcassets */; };
 		1911AE242813547A007454B7 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911AE232813547A007454B7 /* Controller.swift */; };
+		3F3F3A8C28397AA5007278A2 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3F3A8B28397AA5007278A2 /* NavigationBarView.swift */; };
 		3F41BDB52824CEC2005E0924 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41BDB42824CEC2005E0924 /* ForgotPassword.swift */; };
 		3F4BADFE2838512300F3E84E /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BADFD2838512300F3E84E /* ToastModifier.swift */; };
 		3F4E0C6F28349B3600A53A6A /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E0C6E28349B3600A53A6A /* ViewModifiers.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		1911AE212812766D007454B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1911AE232813547A007454B7 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		3F3F3A8B28397AA5007278A2 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		3F41BDB42824CEC2005E0924 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		3F4BADFD2838512300F3E84E /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		3F4E0C6E28349B3600A53A6A /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				3F8A68E92458B04C00119DBB /* ContentView.swift */,
 				3F4E0C6E28349B3600A53A6A /* ViewModifiers.swift */,
 				3F4BADFD2838512300F3E84E /* ToastModifier.swift */,
+				3F3F3A8B28397AA5007278A2 /* NavigationBarView.swift */,
 				3FB88F4228126BF800174623 /* Login.swift */,
 				3FB88F4428126C0700174623 /* Signup.swift */,
 				3F41BDB42824CEC2005E0924 /* ForgotPassword.swift */,
@@ -290,6 +293,7 @@
 			files = (
 				3F8A68E62458B04C00119DBB /* AppDelegate.swift in Sources */,
 				3FB88F4528126C0700174623 /* Signup.swift in Sources */,
+				3F3F3A8C28397AA5007278A2 /* NavigationBarView.swift in Sources */,
 				3F8A68E82458B04C00119DBB /* SceneDelegate.swift in Sources */,
 				3F4E0C6F28349B3600A53A6A /* ViewModifiers.swift in Sources */,
 				3F41BDB52824CEC2005E0924 /* ForgotPassword.swift in Sources */,

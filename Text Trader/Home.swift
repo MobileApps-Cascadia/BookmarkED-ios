@@ -14,11 +14,21 @@ struct Home: View {
     
     var body: some View {
         ZStack {
+            
+            
             Rectangle()
                 .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
+            VStack(spacing:0){
+                NavigationBarView()
+                    .offset(y: 20)
+                Spacer()
+                
+            }
+            
             ZStack {
+                
                 Rectangle()
                     .fill(Color("Home-1"))
                     .frame(maxWidth: .infinity, maxHeight: 200)

@@ -76,7 +76,7 @@ struct ForgotPassword: View {
                 
                 
                 HStack {
-                    Button(action: {}, label: {
+                    NavigationLink(destination: Login(), label: {
                         Spacer()
                         
                         Text("SEND RESET LINK")
