@@ -11,6 +11,8 @@
 		1911AE242813547A007454B7 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911AE232813547A007454B7 /* Controller.swift */; };
 		19EC7912282A1FF8009EB233 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC7911282A1FF8009EB233 /* Book.swift */; };
 		19EC7914282A207C009EB233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC7913282A207C009EB233 /* User.swift */; };
+		3F41BDB52824CEC2005E0924 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41BDB42824CEC2005E0924 /* ForgotPassword.swift */; };
+		3F4E0C6F28349B3600A53A6A /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E0C6E28349B3600A53A6A /* ViewModifiers.swift */; };
 		3F8A68E62458B04C00119DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E52458B04C00119DBB /* AppDelegate.swift */; };
 		3F8A68E82458B04C00119DBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E72458B04C00119DBB /* SceneDelegate.swift */; };
 		3F8A68EA2458B04C00119DBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E92458B04C00119DBB /* ContentView.swift */; };
@@ -18,6 +20,7 @@
 		3F8A68F22458B04C00119DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8A68F02458B04C00119DBB /* LaunchScreen.storyboard */; };
 		3F8A68FD2458B04C00119DBB /* Text_TraderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68FC2458B04C00119DBB /* Text_TraderTests.swift */; };
 		3F8A69082458B04C00119DBB /* Text_TraderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A69072458B04C00119DBB /* Text_TraderUITests.swift */; };
+		3F8B8334281B54F700804385 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B8333281B54F700804385 /* Home.swift */; };
 		3FB88F4328126BF800174623 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB88F4228126BF800174623 /* Login.swift */; };
 		3FB88F4528126C0700174623 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB88F4428126C0700174623 /* Signup.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,8 @@
 		1911AE232813547A007454B7 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		19EC7911282A1FF8009EB233 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		19EC7913282A207C009EB233 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3F41BDB42824CEC2005E0924 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		3F4E0C6E28349B3600A53A6A /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		3F8A68E22458B04C00119DBB /* Text Trader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Trader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8A68E52458B04C00119DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8A68E72458B04C00119DBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		3F8A69032458B04C00119DBB /* Text TraderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text TraderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8A69072458B04C00119DBB /* Text_TraderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_TraderUITests.swift; sourceTree = "<group>"; };
 		3F8A69092458B04C00119DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F8B8333281B54F700804385 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		3FB88F4228126BF800174623 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3FB88F4428126C0700174623 /* Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,8 +118,11 @@
 				3F8A68E52458B04C00119DBB /* AppDelegate.swift */,
 				3F8A68E72458B04C00119DBB /* SceneDelegate.swift */,
 				3F8A68E92458B04C00119DBB /* ContentView.swift */,
+				3F4E0C6E28349B3600A53A6A /* ViewModifiers.swift */,
 				3FB88F4228126BF800174623 /* Login.swift */,
 				3FB88F4428126C0700174623 /* Signup.swift */,
+				3F41BDB42824CEC2005E0924 /* ForgotPassword.swift */,
+				3F8B8333281B54F700804385 /* Home.swift */,
 				1911AE232813547A007454B7 /* Controller.swift */,
 				1911AE212812766D007454B7 /* Assets.xcassets */,
 				3F8A68F02458B04C00119DBB /* LaunchScreen.storyboard */,
@@ -287,9 +296,12 @@
 				19EC7912282A1FF8009EB233 /* Book.swift in Sources */,
 				3F8A68E82458B04C00119DBB /* SceneDelegate.swift in Sources */,
 				19EC7914282A207C009EB233 /* User.swift in Sources */,
+				3F4E0C6F28349B3600A53A6A /* ViewModifiers.swift in Sources */,
+				3F41BDB52824CEC2005E0924 /* ForgotPassword.swift in Sources */,
 				1911AE242813547A007454B7 /* Controller.swift in Sources */,
 				3F8A68EA2458B04C00119DBB /* ContentView.swift in Sources */,
 				3FB88F4328126BF800174623 /* Login.swift in Sources */,
+				3F8B8334281B54F700804385 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
