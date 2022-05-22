@@ -41,12 +41,10 @@ struct ForgotPassword: View {
                     })
                     
                     Spacer()
-                    
-                    
-                    
+                
                     NavigationLink(destination: {}, label: {
                         ZStack {
-                            Text("Help")
+                            Image(systemName: "questionmark.circle")
                                 .font(.title)
                                 .foregroundColor(Color("Light-shadow"))
                                 .offset(x:-20)

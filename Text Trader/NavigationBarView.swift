@@ -22,7 +22,7 @@ struct NavigationBarView: View {
                 .offset(x:15)
             Spacer()
             
-            Button(action: {}, label: {
+            NavigationLink(destination: MyAccount(), label: {
                 ZStack {
                     Image(systemName: "person")
                         .font(.title)

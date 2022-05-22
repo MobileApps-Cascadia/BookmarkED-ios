@@ -1,5 +1,5 @@
 //
-//  PostBook.swift
+//  FindBook.swift
 //  Text Trader
 //
 //  Created by Student Account on 5/21/22.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PostBook: View {
+struct FindBook: View {
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
@@ -50,8 +50,8 @@ struct PostBook: View {
     }
 }
 
-struct PostBook_Previews: PreviewProvider {
+struct FindBook_Previews: PreviewProvider {
     static var previews: some View {
-        PostBook()
+        FindBook()
     }
 }

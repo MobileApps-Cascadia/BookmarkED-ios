@@ -45,7 +45,7 @@ struct Home: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color("Home-font-color"))
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: PostBook(), label: {
                             Spacer()
                             
                             Text("POST BOOK")
@@ -82,7 +82,7 @@ struct Home: View {
                             .foregroundColor(Color("Home-1"))
                             .padding(1)
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: FindBook(), label: {
                             Spacer()
                             
                             Text("FIND BOOK")
@@ -119,7 +119,7 @@ struct Home: View {
                             .foregroundColor(Color("Home-font-color"))
                             .padding(1)
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: Messenger(), label: {
                             Spacer()
                             
                             Text("MESSAGES")
