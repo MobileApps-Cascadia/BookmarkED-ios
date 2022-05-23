@@ -14,11 +14,21 @@ struct Home: View {
     
     var body: some View {
         ZStack {
+            
+            
             Rectangle()
                 .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
+            VStack(spacing:0){
+                NavigationBarView()
+                    .offset(y: 20)
+                Spacer()
+                
+            }
+            
             ZStack {
+                
                 Rectangle()
                     .fill(Color("Home-1"))
                     .frame(maxWidth: .infinity, maxHeight: 200)
@@ -35,7 +45,7 @@ struct Home: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color("Home-font-color"))
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: PostBook(), label: {
                             Spacer()
                             
                             Text("POST BOOK")
@@ -72,7 +82,7 @@ struct Home: View {
                             .foregroundColor(Color("Home-1"))
                             .padding(1)
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: FindBook(), label: {
                             Spacer()
                             
                             Text("FIND BOOK")
@@ -109,7 +119,7 @@ struct Home: View {
                             .foregroundColor(Color("Home-font-color"))
                             .padding(1)
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: Messenger(), label: {
                             Spacer()
                             
                             Text("MESSAGES")
