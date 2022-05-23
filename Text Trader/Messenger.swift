@@ -21,7 +21,7 @@ struct Messenger: View {
             
             VStack(spacing:0){
                 HStack {
-                    NavigationLink(destination: Login(), label: {
+                    NavigationLink(destination: {}, label: {
                         ZStack {
                             Image("Logo2")
                                 .resizable()

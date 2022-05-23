@@ -10,6 +10,10 @@ import SwiftUI
 
 struct PostBook: View {
     
+    @State var email = ""
+    @State var password = ""
+    @State var confirmPassword = ""
+    
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
     var body: some View {
@@ -21,7 +25,7 @@ struct PostBook: View {
             
             VStack(spacing:0){
                 HStack {
-                    NavigationLink(destination: Login(), label: {
+                    NavigationLink(destination: {}, label: {
                         ZStack {
                             Image("Logo2")
                                 .resizable()
@@ -32,7 +36,7 @@ struct PostBook: View {
                     })
                     
                     Spacer()
-                
+                    
                     NavigationLink(destination: Home(), label: {
                         ZStack {
                             Image(systemName: "xmark")
@@ -43,9 +47,105 @@ struct PostBook: View {
                         }
                     })
                 }
-                    .offset(y: 20)
+                .offset(y: 20)
                 Spacer()
             }
+            
+            
+            VStack {
+                HStack(spacing:5){
+                    
+                    
+                    ZStack(alignment: .leading){
+                        
+                        if email.isEmpty {
+                            Text("Title")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$email)
+                            .padding()
+                            .foregroundColor(.white)
+                    }
+                    
+                }
+                
+                Divider().background(Color.white)
+                
+                HStack(spacing:5){
+                    
+                    ZStack(alignment: .leading){
+                        if password.isEmpty {
+                            Text("Author")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$password)
+                            .foregroundColor(Color.white)
+                            .padding()
+                    }
+                }
+                Divider()
+                    .background(Color.white)
+                
+                
+                HStack(spacing:5){
+                    
+                    ZStack(alignment: .leading){
+                        if password.isEmpty {
+                            Text("Edition")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$confirmPassword)
+                            .foregroundColor(Color.white)
+                            .padding()
+                        
+                    }
+                }
+                Divider()
+                    .background(Color.white)
+                
+                
+                HStack(spacing:5){
+                    
+                    ZStack(alignment: .leading){
+                        if password.isEmpty {
+                            Text("ISBN")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$confirmPassword)
+                            .foregroundColor(Color.white)
+                            .padding()
+                        
+                    }
+                }
+                Divider()
+                    .background(Color.white)
+                
+                
+                HStack {
+                    NavigationLink(destination: Home(), label: {
+                        Spacer()
+                        
+                        Text("SUBMIT")
+                            .fontWeight(.bold)
+                        Spacer()
+                        
+                    })
+                    
+                        .foregroundColor(Color.white.opacity(0.8))
+                        .padding()
+                        .background(Color("Login-button"))
+                        .cornerRadius(10)
+                        .padding()
+                }
+                .padding()
+                
+            }
+            .padding(.horizontal)
+            .padding()
+            
+            .offset(y: -10)
+            .hiddenNavigationBarStyle()
+            
         }
     }
 }

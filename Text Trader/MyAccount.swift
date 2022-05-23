@@ -8,10 +8,16 @@
 
 import SwiftUI
 
+
 struct MyAccount: View {
+    
+    @State var data = ["Trade History", "Donation History", "Account Info"]
+    
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
     var body: some View {
+        
+        
         ZStack {
             Rectangle()
                 .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
@@ -20,7 +26,7 @@ struct MyAccount: View {
             
             VStack(spacing:0){
                 HStack {
-                    NavigationLink(destination: Login(), label: {
+                    NavigationLink(destination: {}, label: {
                         ZStack {
                             Image("Logo2")
                                 .resizable()
@@ -31,7 +37,7 @@ struct MyAccount: View {
                     })
                     
                     Spacer()
-                
+                    
                     NavigationLink(destination: Home(), label: {
                         ZStack {
                             Image(systemName: "xmark")
@@ -41,16 +47,35 @@ struct MyAccount: View {
                                 .hiddenNavigationBarStyle()
                         }
                     })
+                    
                 }
-                    .offset(y: 20)
+                List(data, id: \.self) { item in
+                    CustomRow(name: item)
+                    
+                }
+                
+                .offset(y: 20)
                 Spacer()
             }
         }
     }
 }
 
+
+struct CustomRow: View {
+    var name: String
+    
+    var body: some View {
+        Text(name)
+    }
+}
+
+
+
 struct MyAccount_Previews: PreviewProvider {
     static var previews: some View {
         MyAccount()
     }
 }
+
+

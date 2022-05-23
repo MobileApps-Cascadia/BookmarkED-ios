@@ -27,6 +27,7 @@
 		3F8B8334281B54F700804385 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B8333281B54F700804385 /* Home.swift */; };
 		3FB88F4328126BF800174623 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB88F4228126BF800174623 /* Login.swift */; };
 		3FB88F4528126C0700174623 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB88F4428126C0700174623 /* Signup.swift */; };
+		3FF9E3CA283C1FD8004B8924 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9E3C9283C1FD8004B8924 /* Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		3F8B8333281B54F700804385 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		3FB88F4228126BF800174623 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3FB88F4428126C0700174623 /* Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		3FF9E3C9283C1FD8004B8924 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				3F8A68E52458B04C00119DBB /* AppDelegate.swift */,
 				3F8A68E72458B04C00119DBB /* SceneDelegate.swift */,
+				3FF9E3C9283C1FD8004B8924 /* Help.swift */,
 				3F07ADF02839B4D90020EF0D /* FindBook.swift */,
 				3F07ADF42839BC760020EF0D /* MyAccount.swift */,
 				3F07ADF22839B4EC0020EF0D /* Messenger.swift */,
@@ -317,6 +320,7 @@
 				3F07ADF12839B4D90020EF0D /* FindBook.swift in Sources */,
 				3F07ADED2839B4B50020EF0D /* PostBook.swift in Sources */,
 				3F8B8334281B54F700804385 /* Home.swift in Sources */,
+				3FF9E3CA283C1FD8004B8924 /* Help.swift in Sources */,
 				3F07ADF32839B4EC0020EF0D /* Messenger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
