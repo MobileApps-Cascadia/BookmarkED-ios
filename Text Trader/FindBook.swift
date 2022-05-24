@@ -10,6 +10,8 @@ import SwiftUI
 
 struct FindBook: View {
     
+    var books: [Books] = BookList.available
+    
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
     var body: some View {
@@ -19,20 +21,22 @@ struct FindBook: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
             
+            
+            
             VStack(spacing:0){
                 HStack {
-                    NavigationLink(destination: {}, label: {
-                        ZStack {
-                            Image("Logo2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 150, height: 30)
-                                .offset(x:15)
-                        }
-                    })
+                    
+                    ZStack {
+                        Image("Logo2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 150, height: 30)
+                            .offset(x:15)
+                    }
+                    
                     
                     Spacer()
-                
+                    
                     NavigationLink(destination: Home(), label: {
                         ZStack {
                             Image(systemName: "xmark")
@@ -43,7 +47,36 @@ struct FindBook: View {
                         }
                     })
                 }
-                    .offset(y: 20)
+                .padding()
+                
+                List(books, id: \.id) { book in
+                    NavigationLink(destination: BookDetailView(books: book), label: {
+                        HStack {
+                            Image(book.imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 80)
+                                .cornerRadius(4)
+                                .padding(.vertical)
+                            
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(book.title)
+                                    .fontWeight(.semibold)
+                                    .lineLimit(2)
+                                    .minimumScaleFactor(0.5)
+                                
+                                Text(book.uploadDate)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                    .lineLimit(2)
+                                    .minimumScaleFactor(0.5)
+                            }
+                        }
+                    })
+                    
+                }
+                
+                .offset(y: 30)
                 Spacer()
             }
         }
