@@ -16,6 +16,7 @@ struct Response: Codable {
 class Controller: ObservableObject{
     
     @Published var books = [Book]()
+    @Published var loggedUser = User()
     
     var baseURL = "https://mgmcevbvw4.execute-api.us-west-2.amazonaws.com/dev/"
     var testURL = "https://reqres.in/api/books"
@@ -32,15 +33,16 @@ class Controller: ObservableObject{
 //        URLSession.shared.
         
     }
-    func login(username: String, password: String){
+    func login(username: String, password: String) async -> User{
         guard let url = URL(string: baseURL + "login") else {
             print("Invalid URL")
-            return
+            return User()
         }
         var request = URLRequest(url: url)
         request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
-//        URLSession.shared.
-        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        return User()
     }
     func getUserInfo(username: String){
         // TODO: Stretch goal
