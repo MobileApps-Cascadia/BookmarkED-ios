@@ -31,8 +31,8 @@ struct Help: View {
                     })
                     
                     Spacer()
-                
-                    NavigationLink(destination: Home(), label: {
+                    
+                    NavigationLink(destination: ForgotPassword(), label: {
                         ZStack {
                             Image(systemName: "xmark")
                                 .font(.title)
@@ -42,12 +42,86 @@ struct Help: View {
                         }
                     })
                 }
-                    .offset(y: 20)
+                
+                VStack (alignment: .leading){
+                    
+                    Text("How can we help you?")
+                        .foregroundColor(Color("Light-shadow"))
+                        .fontWeight(.bold)
+                        .font(Font.system(size: 30))
+                        .padding(.top, 50)
+                    
+                    NavigationLink(destination: {}, label: {
+                        Text("How to reset your password?")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("Light-shadow"))
+                            .padding(.vertical)
+                    })
+                    
+                    NavigationLink(destination: {}, label: {
+                        Text("How to post a book?")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("Light-shadow"))
+                            .padding(.vertical)
+                    })
+                    
+                    NavigationLink(destination: {}, label: {
+                        Text("How to find a book?")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("Light-shadow"))
+                            .padding(.vertical)
+                    })
+                    
+                    NavigationLink(destination: {}, label: {
+                        Text("How to send a message?")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("Light-shadow"))
+                            .padding(.vertical)
+                    })
+                    
+                    Text("Legal")
+                        .font(Font.system(size: 30))
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("Light-shadow"))
+                        .padding(.vertical)
+                    
+                    NavigationLink(destination: {}, label: {
+                        Text("Privacy Policy")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("Light-shadow"))
+                            .padding(.vertical)
+                    })
+                }
+                .padding()
+                VStack (alignment: .center){
+                    
+                    Text("Can't find what you need?")
+                        .font(Font.system(size: 25))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("Light-shadow"))
+                        .padding(.top, 50)
+                }
+                
+                HStack{
+                    NavigationLink(destination: {}, label: {
+                        Text("Click here")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.blue)
+                    })
+                    
+                    Text("to contact us.")
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("Light-shadow"))
+                        .padding(.vertical)
+                }
+                
                 Spacer()
             }
+            .offset(y: 20)
+            .hiddenNavigationBarStyle()
         }
     }
-    }
+}
 
 
 struct Help_Previews: PreviewProvider {

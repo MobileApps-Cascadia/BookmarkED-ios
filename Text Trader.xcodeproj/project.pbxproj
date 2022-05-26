@@ -131,7 +131,6 @@
 			children = (
 				3F8A68E52458B04C00119DBB /* AppDelegate.swift */,
 				3F8A68E72458B04C00119DBB /* SceneDelegate.swift */,
-				3FF9E3C9283C1FD8004B8924 /* Help.swift */,
 				3F07ADF42839BC760020EF0D /* MyAccount.swift */,
 				3F07ADF02839B4D90020EF0D /* FindBook.swift */,
 				3F6715CE283C47C900568F5C /* BookDetailView.swift */,
@@ -145,6 +144,7 @@
 				3FB88F4228126BF800174623 /* Login.swift */,
 				3FB88F4428126C0700174623 /* Signup.swift */,
 				3F41BDB42824CEC2005E0924 /* ForgotPassword.swift */,
+				3FF9E3C9283C1FD8004B8924 /* Help.swift */,
 				3F8B8333281B54F700804385 /* Home.swift */,
 				1911AE232813547A007454B7 /* Controller.swift */,
 				1911AE212812766D007454B7 /* Assets.xcassets */,
