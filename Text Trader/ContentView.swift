@@ -69,6 +69,7 @@ struct ContentView: View {
                 .padding()
                 
                 .offset(y: -60)
+                .hiddenNavigationBarStyle()
                 
             }
             
