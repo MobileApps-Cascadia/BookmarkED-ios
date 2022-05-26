@@ -19,7 +19,9 @@ struct Messenger: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing:0){
+            
+            
+            VStack {
                 HStack {
                     NavigationLink(destination: {}, label: {
                         ZStack {
@@ -32,7 +34,7 @@ struct Messenger: View {
                     })
                     
                     Spacer()
-                
+                    
                     NavigationLink(destination: Home(), label: {
                         ZStack {
                             Image(systemName: "xmark")
@@ -43,8 +45,50 @@ struct Messenger: View {
                         }
                     })
                 }
-                    .offset(y: 20)
+                .padding(.bottom, 40)
+                .offset(y: 20)
+                .hiddenNavigationBarStyle()
                 Spacer()
+                
+                
+                ScrollView {
+                    ForEach(0..<10, id: \.self) { num in
+                        VStack{
+                            
+                            HStack(spacing: 16){
+                                
+                                Image(systemName: "person.fill")                                .foregroundColor(Color("Light-shadow"))
+                                    .font(.system(size: 32))
+                                    .padding(8)
+                                    .overlay(RoundedRectangle(cornerRadius: 44)
+                                                .stroke(Color.white, lineWidth: 1)
+                                    )
+                                
+                                VStack(alignment: .leading) {
+                                    Text("Username")
+                                        .foregroundColor(Color("Light-shadow"))
+                                        .font(.system(size: 16, weight:.bold))
+                                    
+                                    Text("Messege sent to user")
+                                        .foregroundColor(Color(.lightGray))
+                                        .font(.system(size: 14))
+                                    
+                                }
+                                Spacer()
+                                
+                                Text("22nd")
+                                    .font(.system(size:14, weight: .semibold))
+                                    .foregroundColor(Color("Light-shadow"))
+                            }
+                            Divider()
+                                .background(Color.white)
+                                .padding(.vertical, 8)
+                        }
+                    }
+                    .padding()
+                }
+                .padding(5)
+                
             }
         }
     }
