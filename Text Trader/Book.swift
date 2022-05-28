@@ -1,10 +1,11 @@
 //
-//  Books.swift
+//  Book.swift
 //  Text Trader
 //
-//  Created by Student Account on 5/23/22.
+//  Created by Student Account on 5/27/22.
 //  Copyright © 2022 Cascadia. All rights reserved.
 //
+
 
 import Foundation
 import SwiftUI

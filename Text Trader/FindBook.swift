@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FindBook: View {
     
-    var books: [Books] = BookList.available
+    var book: [Books] = BookList.available
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
@@ -49,8 +49,8 @@ struct FindBook: View {
                 }
                 .padding()
                 
-                List(books, id: \.id) { book in
-                    NavigationLink(destination: BookDetailView(books: book), label: {
+                List(book, id: \.id) { book in
+                    NavigationLink(destination: BookDetailView(book: book), label: {
                         HStack {
                             Image(book.imageName)
                                 .resizable()

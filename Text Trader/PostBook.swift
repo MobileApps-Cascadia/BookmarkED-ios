@@ -10,9 +10,10 @@ import SwiftUI
 
 struct PostBook: View {
     
-    @State var email = ""
-    @State var password = ""
-    @State var confirmPassword = ""
+    @State var title = ""
+    @State var author = ""
+    @State var edition = ""
+    @State var isbn = ""
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
@@ -25,15 +26,13 @@ struct PostBook: View {
             
             VStack(spacing:0){
                 HStack {
-                    NavigationLink(destination: {}, label: {
-                        ZStack {
-                            Image("Logo2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 150, height: 30)
-                                .offset(x:15)
-                        }
-                    })
+                    ZStack {
+                        Image("Logo2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 150, height: 30)
+                            .offset(x:15)
+                    }
                     
                     Spacer()
                     
@@ -58,11 +57,11 @@ struct PostBook: View {
                     
                     ZStack(alignment: .leading){
                         
-                        if email.isEmpty {
+                        if title.isEmpty {
                             Text("Title")
                                 .foregroundColor(Color.white.opacity(0.8))
                         }
-                        TextField("", text: self.$email)
+                        TextField("", text: self.$title)
                             .padding()
                             .foregroundColor(.white)
                     }
@@ -74,11 +73,11 @@ struct PostBook: View {
                 HStack(spacing:5){
                     
                     ZStack(alignment: .leading){
-                        if password.isEmpty {
+                        if author.isEmpty {
                             Text("Author")
                                 .foregroundColor(Color.white.opacity(0.8))
                         }
-                        TextField("", text: self.$password)
+                        TextField("", text: self.$author)
                             .foregroundColor(Color.white)
                             .padding()
                     }
@@ -90,11 +89,11 @@ struct PostBook: View {
                 HStack(spacing:5){
                     
                     ZStack(alignment: .leading){
-                        if password.isEmpty {
+                        if edition.isEmpty {
                             Text("Edition")
                                 .foregroundColor(Color.white.opacity(0.8))
                         }
-                        TextField("", text: self.$confirmPassword)
+                        TextField("", text: self.$edition)
                             .foregroundColor(Color.white)
                             .padding()
                         
@@ -107,11 +106,11 @@ struct PostBook: View {
                 HStack(spacing:5){
                     
                     ZStack(alignment: .leading){
-                        if password.isEmpty {
+                        if isbn.isEmpty {
                             Text("ISBN")
                                 .foregroundColor(Color.white.opacity(0.8))
                         }
-                        TextField("", text: self.$confirmPassword)
+                        TextField("", text: self.$isbn)
                             .foregroundColor(Color.white)
                             .padding()
                         

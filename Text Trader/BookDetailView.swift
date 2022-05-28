@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BookDetailView: View {
     
-    var books: Books
+    var book: Books
     
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
@@ -23,15 +23,13 @@ struct BookDetailView: View {
             
             VStack(spacing:0){
                 HStack {
-                    NavigationLink(destination: {}, label: {
-                        ZStack {
-                            Image("Logo2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 150, height: 30)
-                                .offset(x:15)
-                        }
-                    })
+                    ZStack {
+                        Image("Logo2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 150, height: 30)
+                            .offset(x:15)
+                    }
                     
                     Spacer()
                     
@@ -50,14 +48,14 @@ struct BookDetailView: View {
                 Spacer()
                 VStack(spacing: 15) {
                     
-                    Image(books.imageName)
+                    Image(book.imageName)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 200)
                         .cornerRadius(12)
                         .padding(.vertical)
                     
-                    Text(books.title)
+                    Text(book.title)
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(Color("Light-shadow"))
@@ -65,20 +63,20 @@ struct BookDetailView: View {
                         .padding(.horizontal)
                     
                     
-                    Text(books.author)
+                    Text(book.author)
                         .foregroundColor(Color("Light-shadow"))
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 30)
                         .padding(.vertical, 2)
                     
-                    Text("Edition: " + books.edition)
+                    Text("Edition: " + book.edition)
                         .foregroundColor(Color("Light-shadow"))
                         .multilineTextAlignment(.leading)
                         .padding(.horizontal, 30)
                         .padding(.vertical, 2)
                     
-                    Text("ISBN: " + books.isbn)
+                    Text("ISBN: " + book.isbn)
                         .foregroundColor(Color("Light-shadow"))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 30)
@@ -117,6 +115,6 @@ struct BookDetailView: View {
 
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailView(books: BookList.available.first!)
+        BookDetailView(book: BookList.available.first!)
     }
 }

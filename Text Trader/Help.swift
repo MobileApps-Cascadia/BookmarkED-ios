@@ -20,15 +20,15 @@ struct Help: View {
             
             VStack(spacing:0){
                 HStack {
-                    NavigationLink(destination: Login(), label: {
-                        ZStack {
-                            Image("Logo2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 150, height: 30)
-                                .offset(x:15)
-                        }
-                    })
+                    
+                    ZStack {
+                        Image("Logo2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 150, height: 30)
+                            .offset(x:15)
+                    }
+                    
                     
                     Spacer()
                     
