@@ -15,11 +15,21 @@ struct NavigationBarView: View {
     var body: some View {
         
         HStack {
+            
+            NavigationLink(destination: Login(), label: {
+                ZStack {
+                    Image(systemName: "arrow.left")
+                        .font(.title)
+                        .foregroundColor(Color("Light-shadow"))
+                        .offset(x:15)
+                }
+            })
+            Spacer()
             Image("Logo2")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150, height: 30)
-                .offset(x:15)
+            
             Spacer()
             
             NavigationLink(destination: MyAccount(), label: {

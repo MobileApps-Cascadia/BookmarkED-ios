@@ -15,12 +15,7 @@ struct ForgotPassword: View {
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
     var body: some View {
-        
-        
-        
         ZStack {
-            
-            
             Rectangle()
                 .fill(LinearGradient(gradient: gradient, startPoint: .bottom, endPoint: .top))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -41,8 +36,8 @@ struct ForgotPassword: View {
                     })
                     
                     Spacer()
-                
-                    NavigationLink(destination: {}, label: {
+                    
+                    NavigationLink(destination: Help(), label: {
                         ZStack {
                             Image(systemName: "questionmark.circle")
                                 .font(.title)

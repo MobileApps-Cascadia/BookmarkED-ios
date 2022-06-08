@@ -26,6 +26,28 @@ struct Signup: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
             
+            VStack(spacing:0){
+                
+                HStack {
+                    
+                    
+                    NavigationLink(destination: Login(), label: {
+                        ZStack {
+                            Image(systemName: "arrow.left")
+                                .font(.title)
+                                .foregroundColor(Color("Light-shadow"))
+                                .offset(x:15)
+                        }
+                    })
+                    
+                    Spacer()
+                }
+                
+                .offset(y: 20)
+                Spacer()
+                
+            }
+            
             VStack {
                 Image("Logo")
                     .resizable()

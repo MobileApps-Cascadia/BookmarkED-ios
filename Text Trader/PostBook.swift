@@ -10,6 +10,11 @@ import SwiftUI
 
 struct PostBook: View {
     
+    @State var title = ""
+    @State var author = ""
+    @State var edition = ""
+    @State var isbn = ""
+    
     let gradient = Gradient(colors: [Color("Login-color-1"), Color("Login-color-2"), Color("Login-color-3"), Color("Login-color-4"), Color("Login-color-5"), Color("Login-color-6"), Color("Login-color-7")])
     
     var body: some View {
@@ -21,18 +26,16 @@ struct PostBook: View {
             
             VStack(spacing:0){
                 HStack {
-                    NavigationLink(destination: Login(), label: {
-                        ZStack {
-                            Image("Logo2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 150, height: 30)
-                                .offset(x:15)
-                        }
-                    })
+                    ZStack {
+                        Image("Logo2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 150, height: 30)
+                            .offset(x:15)
+                    }
                     
                     Spacer()
-                
+                    
                     NavigationLink(destination: Home(), label: {
                         ZStack {
                             Image(systemName: "xmark")
@@ -43,9 +46,105 @@ struct PostBook: View {
                         }
                     })
                 }
-                    .offset(y: 20)
+                .offset(y: 20)
                 Spacer()
             }
+            
+            
+            VStack {
+                HStack(spacing:5){
+                    
+                    
+                    ZStack(alignment: .leading){
+                        
+                        if title.isEmpty {
+                            Text("Title")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$title)
+                            .padding()
+                            .foregroundColor(.white)
+                    }
+                    
+                }
+                
+                Divider().background(Color.white)
+                
+                HStack(spacing:5){
+                    
+                    ZStack(alignment: .leading){
+                        if author.isEmpty {
+                            Text("Author")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$author)
+                            .foregroundColor(Color.white)
+                            .padding()
+                    }
+                }
+                Divider()
+                    .background(Color.white)
+                
+                
+                HStack(spacing:5){
+                    
+                    ZStack(alignment: .leading){
+                        if edition.isEmpty {
+                            Text("Edition")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$edition)
+                            .foregroundColor(Color.white)
+                            .padding()
+                        
+                    }
+                }
+                Divider()
+                    .background(Color.white)
+                
+                
+                HStack(spacing:5){
+                    
+                    ZStack(alignment: .leading){
+                        if isbn.isEmpty {
+                            Text("ISBN")
+                                .foregroundColor(Color.white.opacity(0.8))
+                        }
+                        TextField("", text: self.$isbn)
+                            .foregroundColor(Color.white)
+                            .padding()
+                        
+                    }
+                }
+                Divider()
+                    .background(Color.white)
+                
+                
+                HStack {
+                    NavigationLink(destination: Home(), label: {
+                        Spacer()
+                        
+                        Text("SUBMIT")
+                            .fontWeight(.bold)
+                        Spacer()
+                        
+                    })
+                    
+                        .foregroundColor(Color.white.opacity(0.8))
+                        .padding()
+                        .background(Color("Login-button"))
+                        .cornerRadius(10)
+                        .padding()
+                }
+                .padding()
+                
+            }
+            .padding(.horizontal)
+            .padding()
+            
+            .offset(y: -10)
+            .hiddenNavigationBarStyle()
+            
         }
     }
 }
