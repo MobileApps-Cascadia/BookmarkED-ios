@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		1911AE222812766D007454B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1911AE212812766D007454B7 /* Assets.xcassets */; };
 		1911AE242813547A007454B7 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911AE232813547A007454B7 /* Controller.swift */; };
+		19EC7914282A207C009EB233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC7913282A207C009EB233 /* User.swift */; };
 		3F07ADED2839B4B50020EF0D /* PostBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07ADEC2839B4B50020EF0D /* PostBook.swift */; };
-		3F07ADF12839B4D90020EF0D /* FindBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07ADF02839B4D90020EF0D /* FindBook.swift */; };
 		3F07ADF32839B4EC0020EF0D /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07ADF22839B4EC0020EF0D /* Messenger.swift */; };
 		3F07ADF52839BC760020EF0D /* MyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07ADF42839BC760020EF0D /* MyAccount.swift */; };
 		3F3F3A8C28397AA5007278A2 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3F3A8B28397AA5007278A2 /* NavigationBarView.swift */; };
 		3F41BDB52824CEC2005E0924 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41BDB42824CEC2005E0924 /* ForgotPassword.swift */; };
 		3F4BADFE2838512300F3E84E /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BADFD2838512300F3E84E /* ToastModifier.swift */; };
-		3F4E0C6F28349B3600A53A6A /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E0C6E28349B3600A53A6A /* ViewModifiers.swift */; };
 		3F8A68E62458B04C00119DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E52458B04C00119DBB /* AppDelegate.swift */; };
 		3F8A68E82458B04C00119DBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E72458B04C00119DBB /* SceneDelegate.swift */; };
 		3F8A68EA2458B04C00119DBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A68E92458B04C00119DBB /* ContentView.swift */; };
@@ -49,6 +48,8 @@
 /* Begin PBXFileReference section */
 		1911AE212812766D007454B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1911AE232813547A007454B7 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		19EC7911282A1FF8009EB233 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		19EC7913282A207C009EB233 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F07ADEC2839B4B50020EF0D /* PostBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBook.swift; sourceTree = "<group>"; };
 		3F07ADF02839B4D90020EF0D /* FindBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindBook.swift; sourceTree = "<group>"; };
 		3F07ADF22839B4EC0020EF0D /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
@@ -142,6 +143,8 @@
 				3F8A68F02458B04C00119DBB /* LaunchScreen.storyboard */,
 				3F8A68F32458B04C00119DBB /* Info.plist */,
 				3F8A68ED2458B04C00119DBB /* Preview Content */,
+				19EC7911282A1FF8009EB233 /* Book.swift */,
+				19EC7913282A207C009EB233 /* User.swift */,
 			);
 			path = "Text Trader";
 			sourceTree = "<group>";
@@ -305,8 +308,10 @@
 			files = (
 				3F8A68E62458B04C00119DBB /* AppDelegate.swift in Sources */,
 				3FB88F4528126C0700174623 /* Signup.swift in Sources */,
+				19EC7912282A1FF8009EB233 /* Book.swift in Sources */,
 				3F3F3A8C28397AA5007278A2 /* NavigationBarView.swift in Sources */,
 				3F8A68E82458B04C00119DBB /* SceneDelegate.swift in Sources */,
+				19EC7914282A207C009EB233 /* User.swift in Sources */,
 				3F4E0C6F28349B3600A53A6A /* ViewModifiers.swift in Sources */,
 				3F41BDB52824CEC2005E0924 /* ForgotPassword.swift in Sources */,
 				1911AE242813547A007454B7 /* Controller.swift in Sources */,
